@@ -3,7 +3,7 @@ package bytebankcomposto;
 public class TestaContaSemCliente {
 	public static void main(String[] args) {
 		Conta contaDaMarConta = new Conta();
-		System.out.println(contaDaMarConta.saldo);
+		System.out.println(contaDaMarConta.pegaSaldo());
 
 		// foi necessário criar uma conta para que a mesma seja referenciada
 		// populamos colocando um valor dentro dela, como abaixo

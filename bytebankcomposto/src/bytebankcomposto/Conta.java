@@ -1,7 +1,8 @@
 package bytebankcomposto;
-public class Conta {
 
-	double saldo;
+public class Conta {
+	//ao declarar o atributo saldo como privado, só será acessado via método pegaSaldo()
+	private double saldo;
 	int agencia;
 	int numero;
 	// O tipo cliente foi criado para referenciar na Conta
@@ -25,8 +26,8 @@ public class Conta {
 			return false;
 		}
 	}
-	
-	// esse método irá transferir dinheiro da conta 
+
+	// esse método irá transferir dinheiro da conta
 	public boolean transfere(double valor, Conta destino) {
 		if (saldo >= valor) {
 			this.saldo -= valor;
@@ -35,6 +36,11 @@ public class Conta {
 		} else {
 			return false;
 		}
-
+		
+	}
+	//método para retornar o saldo dessa conta
+	public double pegaSaldo(){
+			return this.saldo;
 	}
 }
+
